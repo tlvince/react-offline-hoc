@@ -48,3 +48,16 @@ class MyComponent extends Component {
 const wrapped = withOfflineState(MyComponent);
 wrapped.component.method();
 ```
+
+## Example
+
+A simple application that uses `react-offline-hoc` is provided in the `example/` directory.
+To run it:
+
+```bash
+$ cd example/
+$ npm run start
+# Local server available at localhost:8080
+```
+
+Try connecting and disconnecting from the network and observe the resulting behavior.
