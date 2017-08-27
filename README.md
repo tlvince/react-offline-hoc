@@ -1,5 +1,9 @@
 # react-offline-hoc
 
+[![npm version](https://badge.fury.io/js/react-offline-hoc.svg)](https://badge.fury.io/js/react-offline-hoc)
+[![Build Status](https://travis-ci.org/LINKIWI/react-offline-hoc.svg?branch=master)](https://travis-ci.org/LINKIWI/react-offline-hoc)
+[![Coverage Status](https://coveralls.io/repos/github/LINKIWI/react-offline-hoc/badge.svg?branch=master)](https://coveralls.io/github/LINKIWI/react-offline-hoc?branch=master)
+
 `react-offline-hoc` is a React higher-order component factory to enhance your existing components
 with an `isOnline` prop that indicates the online/offline status of the application.
 
