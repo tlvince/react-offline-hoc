@@ -1,0 +1,8 @@
+# Project artifacts
+node_modules/
+
+# Test artifacts
+coverage/
+
+# Build artifacts
+dist/

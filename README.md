@@ -1,0 +1,50 @@
+# react-offline-hoc
+
+`react-offline-hoc` is a React higher-order component factory to enhance your existing components
+with an `isOnline` prop that indicates the online/offline status of the application.
+
+This HOC uses the browser's native `window.navigator.onLine` property and its `online`/`offline`
+events to determine the current offline state.
+
+## API
+
+#### `this.props.isOnline`
+
+A `true` value for the `isOnline` prop indicates that the client has an active connection to the
+network. Disconnecting from the network (desktop) or enabling airplane mode (mobile) will change
+`isOnline` to `false`.
+
+```javascript
+import React from 'react';
+import withOfflineState from 'react-offline-hoc';
+
+const MyComponent = ({ isOnline }) => (
+  <div>
+    Connectivity is currently: {isOnline ? 'online' : 'offline'}
+  </div>
+);
+
+export default withOfflineState(MyComponent);
+```
+
+#### Accessing the wrapped component
+
+The wrapped component's ref is available via a class property `component` on the HOC instance.
+
+```javascript
+import React, { Component } from 'react';
+import withOfflineState from 'react-offline-hoc';
+
+class MyComponent extends Component {
+  method() {
+    ...
+  }
+
+  render() {
+    ...
+  }
+}
+
+const wrapped = withOfflineState(MyComponent);
+wrapped.component.method();
+```
