@@ -60,6 +60,7 @@ To run it:
 
 ```bash
 $ cd example/
+$ npm install
 $ npm run start
 # Local server available at localhost:8080
 ```
