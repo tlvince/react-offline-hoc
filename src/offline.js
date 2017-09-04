@@ -8,16 +8,14 @@ import React, { Component } from 'react';
  */
 const withOfflineState = (WrappedComponent) =>
   class OfflineStateHOC extends Component {
-    constructor(props) {
-      super(props);
-
-      window.addEventListener('online', this.setOnline);
-      window.addEventListener('offline', this.setOffline);
-    }
-
     state = {
       isOnline: window.navigator.onLine,
     };
+
+    componentDidMount() {
+      window.addEventListener('online', this.setOnline);
+      window.addEventListener('offline', this.setOffline);
+    }
 
     componentWillUnmount() {
       window.removeEventListener('online', this.setOnline);
