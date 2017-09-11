@@ -1,5 +1,5 @@
 {
-  "name": "react-offline-hoc",
+  "name": "tlvince-react-offline-hoc",
   "version": "0.0.2",
   "description": "React higher-order component for detecting network offline state",
   "main": "lib/offline.js",
