@@ -22,10 +22,6 @@ const withOfflineState = (WrappedComponent) =>
       window.removeEventListener('offline', this.setOffline);
     }
 
-    setRef = (ref) => {
-      this.component = ref;
-    };
-
     setOnline = () => this.setState({ isOnline: true });
 
     setOffline = () => this.setState({ isOnline: false });
@@ -35,7 +31,6 @@ const withOfflineState = (WrappedComponent) =>
 
       return (
         <WrappedComponent
-          ref={this.setRef}
           isOnline={isOnline}
           {...this.props}
         />

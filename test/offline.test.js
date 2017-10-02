@@ -48,15 +48,6 @@ describe('Offline HOC', () => {
     expect(offlineDeregistrationEvt).toBe('offline');
   });
 
-  test('Sets a ref to the wrapped component', () => {
-    const offline = mount(
-      <Offline />,
-    );
-
-    expect(offline.instance().component).toBeDefined();
-    expect(offline.instance().component.method()).toBe('method');
-  });
-
   test('Changes isOnline prop based on network connectivity state', () => {
     const mockAddEventListener = jest.fn();
     global.addEventListener = mockAddEventListener;
